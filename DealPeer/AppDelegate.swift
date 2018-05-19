@@ -8,14 +8,28 @@
 
 import UIKit
 
+// Fabric and Crashlytics
+import Fabric
+import Crashlytics
+
+// Google Maps
+import GoogleMaps
+
+let kGoogleMapsAPIKey = "AIzaSyDZJ90zqsINYiEdDFx2O81OqQ30uIRumMI"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Fabric and Crashlytics
+        Fabric.with([Crashlytics.self])
+        
+        // Google Maps
+        GMSServices.provideAPIKey(kGoogleMapsAPIKey)
+
         return true
     }
 
