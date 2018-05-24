@@ -1,0 +1,6 @@
+framework module Pods_DealPeer {
+  umbrella header "Pods-DealPeer-umbrella.h"
+
+  export *
+  module * { export * }
+}

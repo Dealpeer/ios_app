@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C435020B01D3500CBAEF1 /* AppDelegate.swift */; };
-		386C435320B01D3500CBAEF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C435220B01D3500CBAEF1 /* ViewController.swift */; };
+		386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C435220B01D3500CBAEF1 /* MapViewController.swift */; };
 		386C435620B01D3500CBAEF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386C435420B01D3500CBAEF1 /* Main.storyboard */; };
 		386C435820B01D3600CBAEF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386C435720B01D3600CBAEF1 /* Assets.xcassets */; };
 		386C435B20B01D3600CBAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386C435920B01D3600CBAEF1 /* LaunchScreen.storyboard */; };
 		386C436920B02FF200CBAEF1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436820B02FF200CBAEF1 /* Profile.swift */; };
 		386C436C20B033CB00CBAEF1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436B20B033CB00CBAEF1 /* Server.swift */; };
+		38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5419620B74914007CBFDC /* LoginViewController.swift */; };
+		38E5419920B74926007CBFDC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E5419820B74926007CBFDC /* Login.storyboard */; };
 		5D057AA89ED2266244C33CE9 /* Pods_DealPeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		386C434D20B01D3500CBAEF1 /* DealPeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealPeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C435020B01D3500CBAEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		386C435220B01D3500CBAEF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		386C435220B01D3500CBAEF1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		386C435520B01D3500CBAEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		386C435720B01D3600CBAEF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386C435A20B01D3600CBAEF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386C435C20B01D3600CBAEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386C436820B02FF200CBAEF1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		386C436B20B033CB00CBAEF1 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		38E5419620B74914007CBFDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		38E5419820B74926007CBFDC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealPeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9475B8A92E093139F6370B2A /* Pods-DealPeer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealPeer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealPeer/Pods-DealPeer.debug.xcconfig"; sourceTree = "<group>"; };
 		C5DD40C298D6BC0117636E4E /* Pods-DealPeer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealPeer.release.xcconfig"; path = "Pods/Target Support Files/Pods-DealPeer/Pods-DealPeer.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				386C435420B01D3500CBAEF1 /* Main.storyboard */,
+				38E5419820B74926007CBFDC /* Login.storyboard */,
 				386C435920B01D3600CBAEF1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -97,7 +102,8 @@
 		386C436420B02F1A00CBAEF1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				386C435220B01D3500CBAEF1 /* ViewController.swift */,
+				386C435220B01D3500CBAEF1 /* MapViewController.swift */,
+				38E5419620B74914007CBFDC /* LoginViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38E5419920B74926007CBFDC /* Login.storyboard in Resources */,
 				386C435B20B01D3600CBAEF1 /* LaunchScreen.storyboard in Resources */,
 				386C435820B01D3600CBAEF1 /* Assets.xcassets in Resources */,
 				386C435620B01D3500CBAEF1 /* Main.storyboard in Resources */,
@@ -235,10 +242,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DealPeer/Pods-DealPeer-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -253,11 +262,31 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DealPeer/Pods-DealPeer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,9 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				386C435320B01D3500CBAEF1 /* ViewController.swift in Sources */,
+				386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */,
 				386C436920B02FF200CBAEF1 /* Profile.swift in Sources */,
 				386C436C20B033CB00CBAEF1 /* Server.swift in Sources */,
+				38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */,
 				386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

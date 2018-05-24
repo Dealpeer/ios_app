@@ -20,4 +20,11 @@ struct Authenticator {
 
 struct API {
     
+    private let baseURL = "https://api.dealpeer.com"
+    
+}
+
+enum DealPeerEndpoint {
+    
+    case authorize
 }

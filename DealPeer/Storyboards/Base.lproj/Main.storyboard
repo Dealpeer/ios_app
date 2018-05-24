@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DealPeer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="DealPeer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,23 +22,59 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-dy-pW8">
+                                <rect key="frame" x="166" y="120" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGs-FO-HWB">
+                                <rect key="frame" x="166" y="151" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z29-TA-0iJ">
+                                <rect key="frame" x="150" y="575" width="74" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <segue destination="pYA-3C-ma6" kind="presentation" id="hBc-6c-HgX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIc-bf-a7j" secondAttribute="trailing" id="Bzs-cU-Tgc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z29-TA-0iJ" secondAttribute="bottom" constant="50" id="Csq-28-908"/>
+                            <constraint firstItem="z29-TA-0iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q7Z-h2-C8V"/>
+                            <constraint firstItem="BGs-FO-HWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVr-ue-VTa"/>
                             <constraint firstItem="kIc-bf-a7j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="aPM-3L-fyT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIc-bf-a7j" secondAttribute="bottom" id="cF5-Zj-uxB"/>
                             <constraint firstItem="kIc-bf-a7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gK6-U7-96j"/>
+                            <constraint firstItem="7fp-dy-pW8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="gtJ-06-W1G"/>
+                            <constraint firstItem="7fp-dy-pW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLC-hO-VdZ"/>
+                            <constraint firstItem="BGs-FO-HWB" firstAttribute="top" secondItem="7fp-dy-pW8" secondAttribute="bottom" constant="10" id="tOp-yD-RJo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="facebookLoginLabel" destination="7fp-dy-pW8" id="ncL-dJ-uLZ"/>
+                        <outlet property="googleLoginLabel" destination="BGs-FO-HWB" id="m3e-Wp-LkI"/>
                         <outlet property="googleMapView" destination="kIc-bf-a7j" id="8XV-yN-MpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="115.59220389805098"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="ca7-Du-jy0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="pYA-3C-ma6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFi-Pr-18z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="411" y="647"/>
         </scene>
     </scenes>
 </document>

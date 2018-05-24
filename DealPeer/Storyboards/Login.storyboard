@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vEm-hq-PKh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="xU5-pH-bxq">
+            <objects>
+                <viewController id="vEm-hq-PKh" customClass="LoginViewController" customModule="DealPeer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="npN-tp-9LK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="638-AQ-JOG" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="164" y="587" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-VB-iw6">
+                                <rect key="frame" x="295" y="30" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="82R-zl-heQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="M5W-np-swR"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelLoginButtonTapped:" destination="vEm-hq-PKh" eventType="touchUpInside" id="XEv-8O-7y1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-oQ-0Dl" customClass="GIDSignInButton">
+                                <rect key="frame" x="152" y="537" width="70" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j1N-30-PFn"/>
+                                    <constraint firstAttribute="width" constant="70" id="jcu-rt-abp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hgR-7W-34V" firstAttribute="trailing" secondItem="OzJ-VB-iw6" secondAttribute="trailing" constant="10" id="BqW-r7-wy3"/>
+                            <constraint firstItem="OzJ-VB-iw6" firstAttribute="top" secondItem="hgR-7W-34V" secondAttribute="top" constant="10" id="M1w-0b-gr6"/>
+                            <constraint firstItem="hgR-7W-34V" firstAttribute="bottom" secondItem="638-AQ-JOG" secondAttribute="bottom" constant="50" id="NWZ-Jz-BGe"/>
+                            <constraint firstItem="hNJ-oQ-0Dl" firstAttribute="centerX" secondItem="npN-tp-9LK" secondAttribute="centerX" id="hhz-0E-pDd"/>
+                            <constraint firstItem="638-AQ-JOG" firstAttribute="centerX" secondItem="npN-tp-9LK" secondAttribute="centerX" id="ix8-sF-8Hd"/>
+                            <constraint firstItem="638-AQ-JOG" firstAttribute="top" secondItem="hNJ-oQ-0Dl" secondAttribute="bottom" constant="10" id="yEd-TS-BUt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hgR-7W-34V"/>
+                    </view>
+                    <connections>
+                        <outlet property="facebookLoginButton" destination="638-AQ-JOG" id="Y13-L5-SXG"/>
+                        <outlet property="googleLoginButton" destination="hNJ-oQ-0Dl" id="ao5-5T-gSN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G87-y2-j6M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2" y="-54"/>
+        </scene>
+    </scenes>
+</document>
