@@ -10,8 +10,20 @@ import Foundation
 import Alamofire
 
 enum RequestResult {
-    case failed(String)
-    case success
+    case failed(Error)
+    case offersFetched([Offer])
+}
+
+struct RawOfferResultArray: Codable {
+    let result: [String: RawOfferDataContainer]
+}
+
+struct RawOfferDataContainer: Codable {
+    let result: [Offer]
+}
+
+struct RawOfferArray: Codable {
+    let offers: [Offer]
 }
 
 struct Server {
@@ -26,13 +38,10 @@ struct Server {
                             print(response)
                             guard let jsonData = response.data else { return }
                             do {
-                                let json = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments)
-                                print(json)
-                                
-                                // serialize this 
-                                
+                                let offerContainer = try JSONDecoder().decode(RawOfferDataContainer.self, from: jsonData)
+                                completionHandler(.offersFetched(offerContainer.result))
                             } catch let error {
-                                print("error: \(error)")
+                                completionHandler(.failed(error))
                             }
                             
         }

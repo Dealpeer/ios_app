@@ -9,26 +9,35 @@
 import Foundation
 import CoreLocation
 
-enum Language {
-    case russian(String)
-    case english(String)
+struct Language: Codable {
+    let language: String
+    let caption: String
+    
+    enum CodingKeys: String, CodingKey {
+        case language
+        case caption = "text"
+    }
 }
 
-enum OfferType {
-    case sale(String)
-    case rent(String)
-}
-
-struct Offer {
+struct Offer: Codable {
     
     let identifier: String
     let name: [Language]
     let description: [Language]
     let category: String
-    let offerType: OfferType
     let userIdentifier: String
-    let properties: String
-    let coordinates: CLLocationCoordinate2D
+    let properties: [String: AnyCodable]
+    let coordinates: [Double]
+    
+    enum CodingKeys: String, CodingKey {
+        case identifier = "id"
+        case name
+        case description = "desc"
+        case category
+        case userIdentifier = "user_id"
+        case properties
+        case coordinates = "coords"
+    }
 }
 
 

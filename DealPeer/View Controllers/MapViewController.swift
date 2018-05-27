@@ -34,10 +34,17 @@ class MapViewController: UIViewController {
         googleMapView.mapType = .normal
         
         Server.provideAllOffers { (result) in
-            print(result)
-            
+            switch result {
+            case .offersFetched(let offers):
+                self.placeOffersOnMap(offers)
+            case .failed(let error):
+                print("Error occured: \(error)")
+            default:
+                print("Unexpected case!")
+            }
         }
     }
+    
 }
 
 extension MapViewController: CLLocationManagerDelegate {
@@ -53,6 +60,18 @@ extension MapViewController: CLLocationManagerDelegate {
 // Helpers
 
 extension MapViewController {
+    
+    fileprivate func placeOffersOnMap(_ offers: [Offer]) {
+        offers.forEach { offer in
+            if let lat = offer.coordinates.first, let long = offer.coordinates.last {
+                let coordinates =  CLLocationCoordinate2D(latitude: lat, longitude: long)
+                let marker = GMSMarker()
+                marker.position = coordinates
+                marker.title = offer.description.first?.caption
+                marker.map = googleMapView
+            }
+        }
+    }
     
     fileprivate func locationManagerSetup() {
         // Ask for Authorisation from the User.
