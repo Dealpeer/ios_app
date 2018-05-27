@@ -14,8 +14,7 @@ import FacebookLogin
 class MapViewController: UIViewController {
 
     @IBOutlet weak var googleMapView: GMSMapView!
-    @IBOutlet weak var facebookLoginLabel: UILabel!
-    @IBOutlet weak var googleLoginLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     let locationManager = CLLocationManager()
     
@@ -23,15 +22,21 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         locationManagerSetup()
+        interfaceSetup()
         
         if AccessToken.current != nil {
-            facebookLoginLabel.text = "FACEBOOK IS LOGGED IN"
+            print("FACEBOOK IS LOGGED IN")
         } else {
-            facebookLoginLabel.text = "FACEBOOK IS NOT LOGGED IN"
+            print("FACEBOOK IS NOT LOGGED IN")
         }
         
         googleMapView.isMyLocationEnabled = true
         googleMapView.mapType = .normal
+        
+        Server.provideAllOffers { (result) in
+            print(result)
+            
+        }
     }
 }
 
@@ -61,6 +66,11 @@ extension MapViewController {
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    fileprivate func interfaceSetup() {
+        
+        loginButton.layer.cornerRadius = 10.0
     }
 }
 

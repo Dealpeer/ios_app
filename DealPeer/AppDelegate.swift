@@ -15,9 +15,6 @@ import Crashlytics
 // Google Maps
 import GoogleMaps
 
-// FaceBook Login
-import FBSDKLoginKit
-
 // Google Sign In
 import GoogleSignIn
 
@@ -35,9 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Google Maps
         GMSServices.provideAPIKey(kGoogleMapsAPIKey)
-        
-        // Facebook Login
-        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         // Google Login
         GIDSignIn.sharedInstance().clientID = kGoogleSignInAPIKey
@@ -83,6 +77,9 @@ extension AppDelegate: GIDSignInDelegate {
             print("\(#function) Google User Connected: \(user)")
             print("Google User token: \(user.userID)")
             
+            let avatarURL = user.profile.imageURL(withDimension: 800)
+            let currentUserProfile = Profile(authorizationMethod: .google, identifier: user.userID, name: user.profile.name, avatarURL: avatarURL)
+            CredentialsStore.store.setUserProfile(currentUserProfile)
         }
     }
     

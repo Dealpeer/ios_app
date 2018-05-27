@@ -8,8 +8,13 @@
 
 import Foundation
 
+enum AuthMehod {
+    case google, facebook
+}
+
 struct Profile {
-    
+    let authorizationMethod: AuthMehod
     let identifier: String
-    let name: String?
+    let name: String
+    let avatarURL: URL?
 }

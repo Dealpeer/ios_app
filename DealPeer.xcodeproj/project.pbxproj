@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3829627D20BAB72C008C66E0 /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3829627C20BAB72C008C66E0 /* CredentialsStore.swift */; };
+		3829627F20BACDB1008C66E0 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3829627E20BACDB1008C66E0 /* Offer.swift */; };
 		386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C435020B01D3500CBAEF1 /* AppDelegate.swift */; };
 		386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C435220B01D3500CBAEF1 /* MapViewController.swift */; };
 		386C435620B01D3500CBAEF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386C435420B01D3500CBAEF1 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3829627C20BAB72C008C66E0 /* CredentialsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
+		3829627E20BACDB1008C66E0 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		386C434D20B01D3500CBAEF1 /* DealPeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DealPeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386C435020B01D3500CBAEF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386C435220B01D3500CBAEF1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3829628020BAD5C2008C66E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		386C434420B01D3500CBAEF1 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +89,7 @@
 		386C434F20B01D3500CBAEF1 /* DealPeer */ = {
 			isa = PBXGroup;
 			children = (
+				3829628020BAD5C2008C66E0 /* Extensions */,
 				386C435020B01D3500CBAEF1 /* AppDelegate.swift */,
 				386C436A20B030F900CBAEF1 /* Model */,
 				386C436720B02FCB00CBAEF1 /* Services */,
@@ -136,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				386C436820B02FF200CBAEF1 /* Profile.swift */,
+				3829627C20BAB72C008C66E0 /* CredentialsStore.swift */,
+				3829627E20BACDB1008C66E0 /* Offer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,8 +335,10 @@
 			files = (
 				386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */,
 				386C436920B02FF200CBAEF1 /* Profile.swift in Sources */,
+				3829627F20BACDB1008C66E0 /* Offer.swift in Sources */,
 				386C436C20B033CB00CBAEF1 /* Server.swift in Sources */,
 				38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */,
+				3829627D20BAB72C008C66E0 /* CredentialsStore.swift in Sources */,
 				386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

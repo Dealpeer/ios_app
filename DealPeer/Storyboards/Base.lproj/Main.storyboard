@@ -22,22 +22,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-dy-pW8">
-                                <rect key="frame" x="166" y="120" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGs-FO-HWB">
-                                <rect key="frame" x="166" y="151" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z29-TA-0iJ">
-                                <rect key="frame" x="150" y="575" width="74" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="LOGIN"/>
+                                <rect key="frame" x="149.5" y="581" width="75" height="36"/>
+                                <color key="backgroundColor" red="0.2056275904" green="0.47037732599999998" blue="0.96475392579999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="dRi-wH-KdX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="pYA-3C-ma6" kind="presentation" id="hBc-6c-HgX"/>
                                 </connections>
@@ -48,20 +42,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIc-bf-a7j" secondAttribute="trailing" id="Bzs-cU-Tgc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="z29-TA-0iJ" secondAttribute="bottom" constant="50" id="Csq-28-908"/>
                             <constraint firstItem="z29-TA-0iJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q7Z-h2-C8V"/>
-                            <constraint firstItem="BGs-FO-HWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVr-ue-VTa"/>
                             <constraint firstItem="kIc-bf-a7j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="aPM-3L-fyT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIc-bf-a7j" secondAttribute="bottom" id="cF5-Zj-uxB"/>
                             <constraint firstItem="kIc-bf-a7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gK6-U7-96j"/>
-                            <constraint firstItem="7fp-dy-pW8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="gtJ-06-W1G"/>
-                            <constraint firstItem="7fp-dy-pW8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLC-hO-VdZ"/>
-                            <constraint firstItem="BGs-FO-HWB" firstAttribute="top" secondItem="7fp-dy-pW8" secondAttribute="bottom" constant="10" id="tOp-yD-RJo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="facebookLoginLabel" destination="7fp-dy-pW8" id="ncL-dJ-uLZ"/>
-                        <outlet property="googleLoginLabel" destination="BGs-FO-HWB" id="m3e-Wp-LkI"/>
                         <outlet property="googleMapView" destination="kIc-bf-a7j" id="8XV-yN-MpT"/>
+                        <outlet property="loginButton" destination="z29-TA-0iJ" id="mx8-4f-Y1C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
