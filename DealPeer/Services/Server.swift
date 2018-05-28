@@ -14,28 +14,22 @@ enum RequestResult {
     case offersFetched([Offer])
 }
 
-struct RawOfferResultArray: Codable {
-    let result: [String: RawOfferDataContainer]
-}
 
-struct RawOfferDataContainer: Codable {
-    let result: [Offer]
-}
-
-struct RawOfferArray: Codable {
-    let offers: [Offer]
-}
 
 struct Server {
     
     static func provideAllOffers(completionHandler: @escaping (RequestResult)->()) {
+        
+        struct RawOfferDataContainer: Codable {
+            let result: [Offer]
+        }
+        
         let endpoint = DealPeerEndpoint.offers
         Alamofire.request(endpoint.endpointURL(),
                           method: endpoint.httpMethod(),
                           parameters: endpoint.parameters(),
                           encoding: JSONEncoding.default,
-                          headers: endpoint.headers()).response { (response) in
-                            print(response)
+                          headers: endpoint.headers()).response { response in
                             guard let jsonData = response.data else { return }
                             do {
                                 let offerContainer = try JSONDecoder().decode(RawOfferDataContainer.self, from: jsonData)
