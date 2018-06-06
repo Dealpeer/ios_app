@@ -2,14 +2,14 @@ import Foundation
 
 /**
  A type-erased `Decodable` value.
- 
+
  The `AnyDecodable` type forwards decoding responsibilities
  to an underlying value, hiding its specific underlying type.
- 
+
  You can decode mixed-type values in dictionaries
  and other collections that require `Decodable` conformance
  by declaring their contained type to be `AnyDecodable`:
- 
+
      let json = """
      {
          "boolean": true,
@@ -24,13 +24,13 @@ import Foundation
          }
      }
      """.data(using: .utf8)!
- 
+
      let decoder = JSONDecoder()
      let dictionary = try! decoder.decode([String: AnyCodable].self, from: json)
  */
 public struct AnyDecodable: Decodable {
     public let value: Any
-    
+
     public init<T>(_ value: T?) {
         self.value = value ?? ()
     }
@@ -46,7 +46,7 @@ extension AnyDecodable: _AnyDecodable {}
 extension _AnyDecodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
-        
+
         if container.decodeNil() {
             self.init(())
         } else if let bool = try? container.decode(Bool.self) {

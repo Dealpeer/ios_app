@@ -19,6 +19,10 @@
 		386C435B20B01D3600CBAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386C435920B01D3600CBAEF1 /* LaunchScreen.storyboard */; };
 		386C436920B02FF200CBAEF1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436820B02FF200CBAEF1 /* Profile.swift */; };
 		386C436C20B033CB00CBAEF1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436B20B033CB00CBAEF1 /* Server.swift */; };
+		388A565620C7A15900E7FE61 /* OfferListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565520C7A15900E7FE61 /* OfferListCollectionViewController.swift */; };
+		388A565C20C7A1A900E7FE61 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */; };
+		388A565F20C7A1EE00E7FE61 /* OfferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565E20C7A1EE00E7FE61 /* OfferManager.swift */; };
+		388A566120C7F12100E7FE61 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A566020C7F12100E7FE61 /* OfferCollectionViewCell.swift */; };
 		38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5419620B74914007CBFDC /* LoginViewController.swift */; };
 		38E5419920B74926007CBFDC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E5419820B74926007CBFDC /* Login.storyboard */; };
 		5D057AA89ED2266244C33CE9 /* Pods_DealPeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */; };
@@ -39,6 +43,10 @@
 		386C435C20B01D3600CBAEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386C436820B02FF200CBAEF1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		386C436B20B033CB00CBAEF1 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		388A565520C7A15900E7FE61 /* OfferListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListCollectionViewController.swift; sourceTree = "<group>"; };
+		388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		388A565E20C7A1EE00E7FE61 /* OfferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferManager.swift; sourceTree = "<group>"; };
+		388A566020C7F12100E7FE61 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
 		38E5419620B74914007CBFDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38E5419820B74926007CBFDC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealPeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,8 +139,10 @@
 		386C436420B02F1A00CBAEF1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				386C435220B01D3500CBAEF1 /* MapViewController.swift */,
-				38E5419620B74914007CBFDC /* LoginViewController.swift */,
+				388A565D20C7A1AE00E7FE61 /* Main Tab Bar */,
+				388A565820C7A16300E7FE61 /* Map */,
+				388A565920C7A16F00E7FE61 /* Login */,
+				388A565720C7A15D00E7FE61 /* Offer List */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -167,8 +177,42 @@
 				386C436820B02FF200CBAEF1 /* Profile.swift */,
 				3829627C20BAB72C008C66E0 /* CredentialsStore.swift */,
 				3829627E20BACDB1008C66E0 /* Offer.swift */,
+				388A565E20C7A1EE00E7FE61 /* OfferManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		388A565720C7A15D00E7FE61 /* Offer List */ = {
+			isa = PBXGroup;
+			children = (
+				388A565520C7A15900E7FE61 /* OfferListCollectionViewController.swift */,
+				388A566020C7F12100E7FE61 /* OfferCollectionViewCell.swift */,
+			);
+			path = "Offer List";
+			sourceTree = "<group>";
+		};
+		388A565820C7A16300E7FE61 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				386C435220B01D3500CBAEF1 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		388A565920C7A16F00E7FE61 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				38E5419620B74914007CBFDC /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		388A565D20C7A1AE00E7FE61 /* Main Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */,
+			);
+			path = "Main Tab Bar";
 			sourceTree = "<group>";
 		};
 		E8603355AC7F95CA97F5F07B /* Frameworks */ = {
@@ -368,11 +412,15 @@
 				3829628620BB1431008C66E0 /* AnyDecodable.swift in Sources */,
 				3829628720BB1431008C66E0 /* AnyEncodable.swift in Sources */,
 				386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */,
+				388A565620C7A15900E7FE61 /* OfferListCollectionViewController.swift in Sources */,
 				386C436920B02FF200CBAEF1 /* Profile.swift in Sources */,
 				3829627F20BACDB1008C66E0 /* Offer.swift in Sources */,
 				386C436C20B033CB00CBAEF1 /* Server.swift in Sources */,
 				38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */,
 				3829628820BB1431008C66E0 /* AnyCodable.swift in Sources */,
+				388A565C20C7A1A900E7FE61 /* MainTabBarViewController.swift in Sources */,
+				388A565F20C7A1EE00E7FE61 /* OfferManager.swift in Sources */,
+				388A566120C7F12100E7FE61 /* OfferCollectionViewCell.swift in Sources */,
 				3829627D20BAB72C008C66E0 /* CredentialsStore.swift in Sources */,
 				386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */,
 			);

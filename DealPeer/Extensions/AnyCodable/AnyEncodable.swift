@@ -2,14 +2,14 @@ import Foundation
 
 /**
  A type-erased `Encodable` value.
- 
+
  The `AnyEncodable` type forwards encoding responsibilities
  to an underlying value, hiding its specific underlying type.
- 
+
  You can encode mixed-type values in dictionaries
  and other collections that require `Encodable` conformance
  by declaring their contained type to be `AnyEncodable`:
- 
+
      let dictionary: [String: AnyEncodable] = [
          "boolean": true,
          "integer": 1,
@@ -22,13 +22,13 @@ import Foundation
              "c": "charlie"
          ]
      ]
- 
+
      let encoder = JSONEncoder()
      let json = try! encoder.encode(dictionary)
  */
 public struct AnyEncodable: Encodable {
     public let value: Any
-    
+
     public init<T>(_ value: T?) {
         self.value = value ?? ()
     }
@@ -47,7 +47,7 @@ extension AnyEncodable: _AnyEncodable {}
 extension _AnyEncodable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        
+
         switch self.value {
         case is Void:
             try container.encodeNil()
@@ -183,7 +183,7 @@ extension _AnyEncodable {
     public init(extendedGraphemeClusterLiteral value: String) {
         self.init(value)
     }
-    
+
     public init(stringLiteral value: String) {
         self.init(value)
     }

@@ -12,7 +12,7 @@ import CoreLocation
 struct Language: Codable {
     let language: String
     let caption: String
-    
+
     enum CodingKeys: String, CodingKey {
         case language
         case caption = "text"
@@ -20,7 +20,7 @@ struct Language: Codable {
 }
 
 struct Offer: Codable {
-    
+
     let identifier: String
     let name: [Language]
     let description: [Language]
@@ -28,7 +28,7 @@ struct Offer: Codable {
     let userIdentifier: String
     let properties: [String: AnyCodable]
     let coordinates: [Double]
-    
+
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
         case name
@@ -39,5 +39,3 @@ struct Offer: Codable {
         case coordinates = "coords"
     }
 }
-
-

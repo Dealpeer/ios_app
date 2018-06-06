@@ -15,12 +15,13 @@ enum RequestResult {
 }
 
 struct Server {
-    
-    static func provideAllOffers(completionHandler: @escaping (RequestResult)->()) {
-        struct RawOfferDataContainer: Codable {
-            let result: [Offer]
-        }
-        
+
+    struct RawOfferDataContainer: Codable {
+        let result: [Offer]
+    }
+
+    static func provideAllOffers(completionHandler: @escaping (RequestResult) -> Void) {
+
         let endpoint = DealPeerEndpoint.offers
         Alamofire.request(endpoint.endpointURL,
                           method: endpoint.httpMethod,
@@ -39,7 +40,7 @@ struct Server {
 }
 
 struct Authenticator {
-    
+
 }
 
 struct API {
@@ -48,10 +49,10 @@ struct API {
 }
 
 public enum DealPeerEndpoint {
-    
+
     case authorize
     case offers
-    
+
     var endpointURL: String {
         switch self {
         case .authorize:
@@ -60,21 +61,20 @@ public enum DealPeerEndpoint {
             return API.baseURL + API.version + "/offers/search"
         }
     }
-    
+
     var httpMethod: HTTPMethod {
         return HTTPMethod.post
     }
-    
+
     var encoding: JSONEncoding {
         return .default
     }
-    
+
     var headers: HTTPHeaders {
         return ["Content-Type": "application/json"]
     }
-    
+
     var parameters: Parameters {
-        // TODO: Stub
         return [String: Any]()
     }
 }

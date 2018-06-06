@@ -26,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
         // Fabric and Crashlytics
         Fabric.with([Crashlytics.self])
-        
+
         // Google Maps
         GMSServices.provideAPIKey(kGoogleMapsAPIKey)
-        
+
         // Google Login
         GIDSignIn.sharedInstance().clientID = kGoogleSignInAPIKey
         GIDSignIn.sharedInstance().delegate = self
@@ -61,8 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+
+   func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
                                                  annotation: options[UIApplicationOpenURLOptionsKey.annotation])
@@ -76,13 +76,13 @@ extension AppDelegate: GIDSignInDelegate {
         } else {
             print("\(#function) Google User Connected: \(user)")
             print("Google User token: \(user.userID)")
-            
+
             let avatarURL = user.profile.imageURL(withDimension: 800)
             let currentUserProfile = Profile(authorizationMethod: .google, identifier: user.userID, name: user.profile.name, avatarURL: avatarURL)
             CredentialsStore.store.setUserProfile(currentUserProfile)
         }
     }
-    
+
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
         if let error = error {

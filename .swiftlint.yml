@@ -1,18 +1,24 @@
-disabled_rules: # rule identifiers to exclude from running
-  - colon
-  - comma
-  - control_statement
+disabled_rules:
+  - line_length
+  - trailing_newline
+  - file_length
+  - large_tuple
+  - syntactic_sugar
+  - redundant_string_enum_value
+  - notification_center_detachment
+  - switch_case_alignment
+  - weak_delegate
+
 opt_in_rules: # some rules are only opt-in
   - empty_count
   # Find all the available rules by running:
   # swiftlint rules
 included: # paths to include during linting. `--path` is ignored if present.
-  - Source
+  - DealPeer
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-  - Source/ExcludedFolder
-  - Source/ExcludedFile.swift
+  - DealPeer/Extensions/AnyCodable
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
@@ -33,14 +39,14 @@ file_length:
 # naming rules can set warnings/errors for min_length and max_length
 # additionally they can set excluded names
 type_name:
-  min_length: 4 # only warning
+  min_length: 3 # only warning
   max_length: # warning and error
     warning: 40
     error: 50
   excluded: iPhone # excluded via string
 identifier_name:
   min_length: # only min_length
-    error: 4 # only error
+    error: 3 # only error
   excluded: # excluded via string array
     - id
     - URL

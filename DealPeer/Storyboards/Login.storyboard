@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vEm-hq-PKh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vEm-hq-PKh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,49 +13,36 @@
         <!--Login View Controller-->
         <scene sceneID="xU5-pH-bxq">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="vEm-hq-PKh" customClass="LoginViewController" customModule="DealPeer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vEm-hq-PKh" customClass="LoginViewController" customModule="DealPeer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="npN-tp-9LK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLY-CQ-yZW">
-                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNJ-oQ-0Dl" customClass="GIDSignInButton">
-                                        <rect key="frame" x="132" y="329.5" width="70" height="28"/>
+                                        <rect key="frame" x="152.5" y="389.5" width="70" height="28"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="j1N-30-PFn"/>
                                             <constraint firstAttribute="width" constant="70" id="jcu-rt-abp"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzJ-VB-iw6">
-                                        <rect key="frame" x="295" y="20" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="20" id="82R-zl-heQ"/>
-                                            <constraint firstAttribute="height" constant="20" id="M5W-np-swR"/>
-                                        </constraints>
-                                        <state key="normal" image="closeButton"/>
-                                        <connections>
-                                            <action selector="cancelLoginButtonTapped:" destination="vEm-hq-PKh" eventType="touchUpInside" id="XEv-8O-7y1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="hNJ-oQ-0Dl" firstAttribute="centerY" secondItem="tLY-CQ-yZW" secondAttribute="centerY" constant="40" id="80M-dq-pc5"/>
-                                    <constraint firstItem="OzJ-VB-iw6" firstAttribute="top" secondItem="tLY-CQ-yZW" secondAttribute="top" constant="20" id="HxR-Ja-rcg"/>
+                                    <constraint firstItem="hNJ-oQ-0Dl" firstAttribute="centerY" secondItem="tLY-CQ-yZW" secondAttribute="centerY" constant="70" id="80M-dq-pc5"/>
                                     <constraint firstItem="hNJ-oQ-0Dl" firstAttribute="centerX" secondItem="tLY-CQ-yZW" secondAttribute="centerX" id="aaV-F3-tSa"/>
-                                    <constraint firstAttribute="trailing" secondItem="OzJ-VB-iw6" secondAttribute="trailing" constant="20" id="hkh-FE-HMS"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hgR-7W-34V" firstAttribute="trailing" secondItem="tLY-CQ-yZW" secondAttribute="trailing" constant="20" id="AJY-8V-eKZ"/>
-                            <constraint firstItem="tLY-CQ-yZW" firstAttribute="top" secondItem="hgR-7W-34V" secondAttribute="top" constant="20" id="Qum-ZB-FS7"/>
-                            <constraint firstItem="hgR-7W-34V" firstAttribute="bottom" secondItem="tLY-CQ-yZW" secondAttribute="bottom" constant="20" id="SaW-EI-Ch2"/>
-                            <constraint firstItem="tLY-CQ-yZW" firstAttribute="leading" secondItem="hgR-7W-34V" secondAttribute="leading" constant="20" id="Usg-Nl-hLd"/>
+                            <constraint firstItem="hgR-7W-34V" firstAttribute="trailing" secondItem="tLY-CQ-yZW" secondAttribute="trailing" id="AJY-8V-eKZ"/>
+                            <constraint firstItem="tLY-CQ-yZW" firstAttribute="top" secondItem="hgR-7W-34V" secondAttribute="top" constant="-20" id="Qum-ZB-FS7"/>
+                            <constraint firstItem="hgR-7W-34V" firstAttribute="bottom" secondItem="tLY-CQ-yZW" secondAttribute="bottom" id="SaW-EI-Ch2"/>
+                            <constraint firstItem="tLY-CQ-yZW" firstAttribute="leading" secondItem="hgR-7W-34V" secondAttribute="leading" id="Usg-Nl-hLd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hgR-7W-34V"/>
                     </view>
@@ -69,7 +56,4 @@
             <point key="canvasLocation" x="0.80000000000000004" y="-54.422788605697157"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="closeButton" width="1280" height="1280"/>
-    </resources>
 </document>
