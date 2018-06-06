@@ -193,6 +193,7 @@
 				C50A4EA6288B0DAE47566A18 /* [CP] Embed Pods Frameworks */,
 				632B041FD0FD696367A67B50 /* [CP] Copy Pods Resources */,
 				386C436220B02DAF00CBAEF1 /* Fabric / Crashlytics */,
+				388A565420C79EA700E7FE61 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -264,6 +265,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 809ee88c0cca3f2480f4c9807eeaeddef92bfdb5 7a20f25da18722a7d68617b67b08ce25d75cdec113198facfd065d15aa277ca1";
+		};
+		388A565420C79EA700E7FE61 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		632B041FD0FD696367A67B50 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -508,6 +523,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = MQJU24CLYL;
 				INFOPLIST_FILE = "$(SRCROOT)/DealPeer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQJU24CLYL;
 				INFOPLIST_FILE = "$(SRCROOT)/DealPeer/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
