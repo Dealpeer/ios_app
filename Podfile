@@ -34,4 +34,7 @@ target 'DealPeer' do
     # Maps and Geo
     pod 'GoogleMaps'
     
+    # Code Style
+    pod 'SwiftLint'
+    
 end

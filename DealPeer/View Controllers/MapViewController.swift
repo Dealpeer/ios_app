@@ -39,8 +39,6 @@ class MapViewController: UIViewController {
                 self.placeOffersOnMap(offers)
             case .failed(let error):
                 print("Error occured: \(error)")
-            default:
-                print("Unexpected case!")
             }
         }
     }

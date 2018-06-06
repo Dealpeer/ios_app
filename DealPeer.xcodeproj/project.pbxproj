@@ -70,11 +70,19 @@
 		3829628020BAD5C2008C66E0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				386868BF20BF13E3003106E5 /* AnyCodable */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		386868BF20BF13E3003106E5 /* AnyCodable */ = {
+			isa = PBXGroup;
+			children = (
 				3829628520BB1431008C66E0 /* AnyCodable.swift */,
 				3829628320BB1431008C66E0 /* AnyDecodable.swift */,
 				3829628420BB1431008C66E0 /* AnyEncodable.swift */,
 			);
-			path = Extensions;
+			path = AnyCodable;
 			sourceTree = "<group>";
 		};
 		386C434420B01D3500CBAEF1 = {

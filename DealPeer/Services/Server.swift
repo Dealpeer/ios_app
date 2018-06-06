@@ -14,22 +14,19 @@ enum RequestResult {
     case offersFetched([Offer])
 }
 
-
-
 struct Server {
     
     static func provideAllOffers(completionHandler: @escaping (RequestResult)->()) {
-        
         struct RawOfferDataContainer: Codable {
             let result: [Offer]
         }
         
         let endpoint = DealPeerEndpoint.offers
-        Alamofire.request(endpoint.endpointURL(),
-                          method: endpoint.httpMethod(),
-                          parameters: endpoint.parameters(),
+        Alamofire.request(endpoint.endpointURL,
+                          method: endpoint.httpMethod,
+                          parameters: endpoint.parameters,
                           encoding: JSONEncoding.default,
-                          headers: endpoint.headers()).response { response in
+                          headers: endpoint.headers).response { response in
                             guard let jsonData = response.data else { return }
                             do {
                                 let offerContainer = try JSONDecoder().decode(RawOfferDataContainer.self, from: jsonData)
@@ -37,10 +34,8 @@ struct Server {
                             } catch let error {
                                 completionHandler(.failed(error))
                             }
-                            
         }
     }
-    
 }
 
 struct Authenticator {
@@ -48,7 +43,6 @@ struct Authenticator {
 }
 
 struct API {
-    
     static let baseURL = "https://api.dealpeer.com"
     static let version = "/v1"
 }
@@ -58,7 +52,7 @@ public enum DealPeerEndpoint {
     case authorize
     case offers
     
-    func endpointURL() -> String {
+    var endpointURL: String {
         switch self {
         case .authorize:
             return API.baseURL + ""
@@ -67,19 +61,20 @@ public enum DealPeerEndpoint {
         }
     }
     
-    func httpMethod() -> HTTPMethod {
+    var httpMethod: HTTPMethod {
         return HTTPMethod.post
     }
     
-    func encoding() -> JSONEncoding {
+    var encoding: JSONEncoding {
         return .default
     }
     
-    func headers() -> HTTPHeaders {
+    var headers: HTTPHeaders {
         return ["Content-Type": "application/json"]
     }
     
-    func parameters() -> Parameters {
+    var parameters: Parameters {
+        // TODO: Stub
         return [String: Any]()
     }
 }
