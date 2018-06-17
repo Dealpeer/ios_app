@@ -10,6 +10,5 @@ import UIKit
 
 class OfferCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var offerImage: UIImageView!
-
     @IBOutlet weak var offerNameLabel: UILabel!
 }

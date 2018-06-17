@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 private let reuseIdentifier = "offerCollectionViewCell"
 
 class OfferListCollectionViewController: UICollectionViewController {
 
-    var dataSource: [Offer] = []
+    var dataSource: [SearchResult] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,21 +34,40 @@ class OfferListCollectionViewController: UICollectionViewController {
 
         let offer = dataSource[indexPath.row]
         cell.offerNameLabel.text = offer.name.first?.caption
+        cell.offerImage.image = #imageLiteral(resourceName: "placeholder")
+        
+        if let imageUrlString = offer.images.first, let imageURL = URL(string: imageUrlString)  {
+            cell.offerImage.sd_setImage(with: imageURL)
+        }
 
         return cell
     }
 }
 
-extension OfferListCollectionViewController: OffersUpdatable {
+extension OfferListCollectionViewController {
+    
+    func changeScrollDirection(horizontal: Bool) {
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = horizontal ? .horizontal : .vertical
+        }
+    }
+}
 
+extension OfferListCollectionViewController: OffersUpdatable {
+    
+    func storeRecievedAvailableOffers(result: [SearchResult]) {
+        print("\(type(of: self)) recieved \(result.count) search results")
+        dataSource = result
+        collectionView?.reloadData()
+    }
+    
     func storeUpdatedOffers(offers: [Offer]) {
         print("\(type(of: self)) recieved \(offers.count) offers")
-        dataSource = offers
-        collectionView?.reloadData()
+        
     }
 
     func storeFailedToUpdateOffers(error: Error) {
-        print("\(type(of: self)) recieved offer update error")
+        print("\(type(of: self)) recieved offer update error: \(error.localizedDescription)")
     }
 
 }

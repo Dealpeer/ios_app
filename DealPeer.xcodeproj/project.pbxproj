@@ -19,11 +19,14 @@
 		386C435B20B01D3600CBAEF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386C435920B01D3600CBAEF1 /* LaunchScreen.storyboard */; };
 		386C436920B02FF200CBAEF1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436820B02FF200CBAEF1 /* Profile.swift */; };
 		386C436C20B033CB00CBAEF1 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C436B20B033CB00CBAEF1 /* Server.swift */; };
+		38813C8F20D65A21005FFBF5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38813C8E20D65A21005FFBF5 /* MainViewController.swift */; };
+		38813C9120D65A3C005FFBF5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38813C9020D65A3C005FFBF5 /* ListViewController.swift */; };
+		38813C9320D65A44005FFBF5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38813C9220D65A44005FFBF5 /* MessagesViewController.swift */; };
+		38813C9520D65E7F005FFBF5 /* Bool+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38813C9420D65E7F005FFBF5 /* Bool+Extensions.swift */; };
+		38813C9720D660B6005FFBF5 /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38813C9620D660B6005FFBF5 /* MulticastDelegate.swift */; };
 		388A565620C7A15900E7FE61 /* OfferListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565520C7A15900E7FE61 /* OfferListCollectionViewController.swift */; };
-		388A565C20C7A1A900E7FE61 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */; };
 		388A565F20C7A1EE00E7FE61 /* OfferManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A565E20C7A1EE00E7FE61 /* OfferManager.swift */; };
 		388A566120C7F12100E7FE61 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A566020C7F12100E7FE61 /* OfferCollectionViewCell.swift */; };
-		38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5419620B74914007CBFDC /* LoginViewController.swift */; };
 		38E5419920B74926007CBFDC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E5419820B74926007CBFDC /* Login.storyboard */; };
 		5D057AA89ED2266244C33CE9 /* Pods_DealPeer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */; };
 /* End PBXBuildFile section */
@@ -43,11 +46,14 @@
 		386C435C20B01D3600CBAEF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386C436820B02FF200CBAEF1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		386C436B20B033CB00CBAEF1 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		38813C8E20D65A21005FFBF5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		38813C9020D65A3C005FFBF5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		38813C9220D65A44005FFBF5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		38813C9420D65E7F005FFBF5 /* Bool+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bool+Extensions.swift"; sourceTree = "<group>"; };
+		38813C9620D660B6005FFBF5 /* MulticastDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
 		388A565520C7A15900E7FE61 /* OfferListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListCollectionViewController.swift; sourceTree = "<group>"; };
-		388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		388A565E20C7A1EE00E7FE61 /* OfferManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferManager.swift; sourceTree = "<group>"; };
 		388A566020C7F12100E7FE61 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
-		38E5419620B74914007CBFDC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38E5419820B74926007CBFDC /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		87EC27ADD7DD759D372ACF4C /* Pods_DealPeer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealPeer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9475B8A92E093139F6370B2A /* Pods-DealPeer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DealPeer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DealPeer/Pods-DealPeer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,12 +81,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		3829628020BAD5C2008C66E0 /* Extensions */ = {
+		3829628020BAD5C2008C66E0 /* Extensions and helpers */ = {
 			isa = PBXGroup;
 			children = (
 				386868BF20BF13E3003106E5 /* AnyCodable */,
+				38813C9620D660B6005FFBF5 /* MulticastDelegate.swift */,
+				38813C9420D65E7F005FFBF5 /* Bool+Extensions.swift */,
 			);
-			path = Extensions;
+			path = "Extensions and helpers";
 			sourceTree = "<group>";
 		};
 		386868BF20BF13E3003106E5 /* AnyCodable */ = {
@@ -114,7 +122,7 @@
 		386C434F20B01D3500CBAEF1 /* DealPeer */ = {
 			isa = PBXGroup;
 			children = (
-				3829628020BAD5C2008C66E0 /* Extensions */,
+				3829628020BAD5C2008C66E0 /* Extensions and helpers */,
 				386C435020B01D3500CBAEF1 /* AppDelegate.swift */,
 				386C436A20B030F900CBAEF1 /* Model */,
 				386C436720B02FCB00CBAEF1 /* Services */,
@@ -139,9 +147,10 @@
 		386C436420B02F1A00CBAEF1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				388A565D20C7A1AE00E7FE61 /* Main Tab Bar */,
+				38813C8E20D65A21005FFBF5 /* MainViewController.swift */,
+				38813C9020D65A3C005FFBF5 /* ListViewController.swift */,
+				38813C9220D65A44005FFBF5 /* MessagesViewController.swift */,
 				388A565820C7A16300E7FE61 /* Map */,
-				388A565920C7A16F00E7FE61 /* Login */,
 				388A565720C7A15D00E7FE61 /* Offer List */,
 			);
 			path = "View Controllers";
@@ -197,22 +206,6 @@
 				386C435220B01D3500CBAEF1 /* MapViewController.swift */,
 			);
 			path = Map;
-			sourceTree = "<group>";
-		};
-		388A565920C7A16F00E7FE61 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				38E5419620B74914007CBFDC /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		388A565D20C7A1AE00E7FE61 /* Main Tab Bar */ = {
-			isa = PBXGroup;
-			children = (
-				388A565B20C7A1A900E7FE61 /* MainTabBarViewController.swift */,
-			);
-			path = "Main Tab Bar";
 			sourceTree = "<group>";
 		};
 		E8603355AC7F95CA97F5F07B /* Frameworks */ = {
@@ -312,7 +305,7 @@
 		};
 		388A565420C79EA700E7FE61 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -320,7 +313,7 @@
 			name = Swiftlint;
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
@@ -412,17 +405,20 @@
 				3829628620BB1431008C66E0 /* AnyDecodable.swift in Sources */,
 				3829628720BB1431008C66E0 /* AnyEncodable.swift in Sources */,
 				386C435320B01D3500CBAEF1 /* MapViewController.swift in Sources */,
+				38813C9320D65A44005FFBF5 /* MessagesViewController.swift in Sources */,
 				388A565620C7A15900E7FE61 /* OfferListCollectionViewController.swift in Sources */,
 				386C436920B02FF200CBAEF1 /* Profile.swift in Sources */,
 				3829627F20BACDB1008C66E0 /* Offer.swift in Sources */,
 				386C436C20B033CB00CBAEF1 /* Server.swift in Sources */,
-				38E5419720B74914007CBFDC /* LoginViewController.swift in Sources */,
 				3829628820BB1431008C66E0 /* AnyCodable.swift in Sources */,
-				388A565C20C7A1A900E7FE61 /* MainTabBarViewController.swift in Sources */,
+				38813C8F20D65A21005FFBF5 /* MainViewController.swift in Sources */,
+				38813C9720D660B6005FFBF5 /* MulticastDelegate.swift in Sources */,
 				388A565F20C7A1EE00E7FE61 /* OfferManager.swift in Sources */,
 				388A566120C7F12100E7FE61 /* OfferCollectionViewCell.swift in Sources */,
 				3829627D20BAB72C008C66E0 /* CredentialsStore.swift in Sources */,
+				38813C9120D65A3C005FFBF5 /* ListViewController.swift in Sources */,
 				386C435120B01D3500CBAEF1 /* AppDelegate.swift in Sources */,
+				38813C9520D65E7F005FFBF5 /* Bool+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

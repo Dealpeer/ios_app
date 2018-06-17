@@ -9,32 +9,41 @@
 import Foundation
 
 enum OfferUpdateResult {
-    case storeUpdateSuccess([Offer])
+    case storeUpdateSearchResults([SearchResult])
+    case storeUpdateOffers([Offer])
     case storeUpdateFailed(Error)
 }
 
 typealias OfferUpdateResultClosure = (OfferUpdateResult) -> Void
 
 protocol OffersUpdatable: class {
+    func storeRecievedAvailableOffers(result: [SearchResult])
     func storeUpdatedOffers(offers: [Offer])
     func storeFailedToUpdateOffers(error: Error)
 }
 
 class OfferManager {
-    private var storeUpdateClosures: [OfferUpdateResultClosure] = []
+    
+    private(set) var multicast = MulticastDelegate<OffersUpdatable>()
+    
     var offers: [Offer] = []
-    func appendUpdateClosure(closure: @escaping OfferUpdateResultClosure) {
-        storeUpdateClosures.append(closure)
-    }
-
-    func provideOffers() {
+    var searchResults: [SearchResult] = []
+    
+    func performInitialEmptySearch() {
         Server.provideAllOffers { (result) in
             switch result {
             case .failed(let updateError):
-                self.storeUpdateClosures.forEach { $0(OfferUpdateResult.storeUpdateFailed(updateError)) }
+                self.multicast.broadcast { $0.storeFailedToUpdateOffers(error: updateError)
+                }
             case .offersFetched(let updatedOffers):
-                self.storeUpdateClosures.forEach { $0(OfferUpdateResult.storeUpdateSuccess(updatedOffers)) }
+                self.multicast.broadcast { $0.storeUpdatedOffers(offers: updatedOffers) }
+                self.offers = updatedOffers
+            case .searchResultsFetched(let searchResults):
+                self.multicast.broadcast { $0.storeRecievedAvailableOffers(result: searchResults)}
+                self.searchResults = searchResults
             }
         }
     }
 }
+
+extension OfferManager: MultiCastable { typealias MulticastType = OffersUpdatable }

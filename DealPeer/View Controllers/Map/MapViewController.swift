@@ -26,10 +26,14 @@ class MapViewController: UIViewController {
 }
 
 extension MapViewController: OffersUpdatable {
-
+    
+    func storeRecievedAvailableOffers(result: [SearchResult]) {
+        print("\(type(of: self)) recieved \(result.count) results")
+        placeOffersOnMap(result)
+    }
+    
     func storeUpdatedOffers(offers: [Offer]) {
         print("\(type(of: self)) recieved \(offers.count) offers")
-        placeOffersOnMap(offers)
     }
 
     func storeFailedToUpdateOffers(error: Error) {
@@ -51,19 +55,19 @@ extension MapViewController: CLLocationManagerDelegate {
 // Helpers
 
 extension MapViewController {
-    fileprivate func placeOffersOnMap(_ offers: [Offer]) {
-        offers.forEach { offer in
+    private func placeOffersOnMap(_ result: [SearchResult]) {
+        result.forEach { offer in
             if let lat = offer.coordinates.first, let long = offer.coordinates.last {
                 let coordinates =  CLLocationCoordinate2D(latitude: lat, longitude: long)
                 let marker = GMSMarker()
                 marker.position = coordinates
-                marker.title = offer.description.first?.caption
+                marker.title = offer.name.first?.caption
                 marker.map = googleMapView
             }
         }
     }
 
-    fileprivate func locationManagerSetup() {
+    private func locationManagerSetup() {
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
 

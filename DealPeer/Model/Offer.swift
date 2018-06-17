@@ -19,8 +19,27 @@ struct Language: Codable {
     }
 }
 
-struct Offer: Codable {
+struct SearchResult: Codable {
+    let state: Int
+    let identifier: String
+    let name: [Language]
+    let properties: [String: AnyCodable]
+    let coordinates: [Double]
+    let price: Int
+    let images: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case state
+        case identifier = "id"
+        case name
+        case properties
+        case coordinates = "coords"
+        case price
+        case images
+    }
+}
 
+struct Offer: Codable {
     let identifier: String
     let name: [Language]
     let description: [Language]
@@ -28,6 +47,7 @@ struct Offer: Codable {
     let userIdentifier: String
     let properties: [String: AnyCodable]
     let coordinates: [Double]
+    let images: [String]
 
     enum CodingKeys: String, CodingKey {
         case identifier = "id"
@@ -37,5 +57,6 @@ struct Offer: Codable {
         case userIdentifier = "user_id"
         case properties
         case coordinates = "coords"
+        case images
     }
 }
